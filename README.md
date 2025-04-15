@@ -2,6 +2,7 @@
 
 A simple interactive HTML5 Canvas + TypeScript application for creating, manipulating, and animating geometric shapes.
 
+URL to the project: https://darshancode2005.github.io/geometry-sandbox/
 
 ## Setup
 
