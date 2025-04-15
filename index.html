@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Geometry Sandbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Canvas Geometry Sandbox</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="shapeType">Shape:</label>
+                <select id="shapeType">
+                    <option value="circle">Circle</option>
+                    <option value="rectangle">Rectangle</option>
+                    <option value="triangle">Triangle</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="shapeColor">Fill Color:</label>
+                <input type="color" id="shapeColor" value="#3498db">
+            </div>
+
+            <div class="control-group">
+                <label for="shapeAlpha">Transparency:</label>
+                <input type="range" id="shapeAlpha" min="0" max="100" value="100">
+                <span id="alphaValue">100%</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="shapeSize">Size:</label>
+                <input type="range" id="shapeSize" min="10" max="100" value="50">
+            </div>
+        </div>
+
+        <div class="controls stroke-controls">
+            <div class="control-group">
+                <label for="outlineWidth">Outline Width:</label>
+                <input type="range" id="outlineWidth" min="0" max="20" value="0">
+                <span id="outlineWidthValue">0px</span>
+            </div>
+
+            <div class="control-group">
+                <label for="outlineColor">Outline Color:</label>
+                <input type="color" id="outlineColor" value="#000000">
+            </div>
+        </div>
+        
+        <div class="transform-controls">
+            <h3>Transform Selected Shape</h3>
+            <div class="button-group">
+                <button id="rotateLeft">Rotate Left</button>
+                <button id="rotateRight">Rotate Right</button>
+                <button id="scaleUp">Scale Up</button>
+                <button id="scaleDown">Scale Down</button>
+                <button id="reflectX">Reflect X</button>
+                <button id="reflectY">Reflect Y</button>
+                <button id="deleteShape">Delete</button>
+            </div>
+            <p class="selection-status">No shape selected</p>
+        </div>
+        
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <p>Click on the canvas to add shapes. Click on a shape to select it for transformation.</p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html> 
